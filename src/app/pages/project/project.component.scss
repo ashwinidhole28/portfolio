@@ -1,0 +1,82 @@
+.project-card {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    height: 300px;
+    width: 500px;
+    
+    &:hover .card-image {
+      opacity: 0.2;
+    }
+  
+    &:hover .card-buttons {
+      opacity: 1;
+    }
+  }
+  
+  .flexBox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+  
+  .card-content {
+    position: relative;
+  }
+  
+  .headerBox {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 100%; /* Ensure the image takes the full height of the card */
+    object-fit: cover; /* Maintain aspect ratio while filling the box */
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .card-buttons a {
+    margin: 8px;
+  }
+  
+  @media (max-width: 600px) {
+    .project-card {
+      padding: 8px;
+      width: 250px;
+      height: 200px; /* Adjust height for smaller screens */
+    }
+  }
+  
+  mat-card-header {
+    text-align: center;
+  }
+  
+  mat-card-title {
+    font-size: 1.5em;
+  }
+  
+  mat-card-subtitle {
+    font-size: 1.2em;
+    color: gray;
+  }
+  
+  mat-card-content {
+    margin-top: 16px;
+    height: 66%;
+  }
+  

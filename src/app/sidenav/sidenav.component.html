@@ -1,0 +1,25 @@
+<mat-toolbar class="mat-elevation-z3">
+    <button mat-icon-button (click)="toggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+  </mat-toolbar>
+  
+  <mat-sidenav-container style="background-color: white;">
+    <mat-sidenav 
+      [opened]="!isSmallScreen() || !collapsed()"  
+      [mode]="isSmallScreen() ? 'over' : 'side'"  
+      [style.width]="sidenavWidth()" 
+      (backdropClick)="toggleSidenav()">
+      
+      <app-custom-sidenav 
+        [collapsed]="collapsed()" 
+        (tabClicked)="toggleSidenav()">
+      </app-custom-sidenav>
+  
+    </mat-sidenav>
+  
+    <mat-sidenav-content class="content" [style.margin-left]="!isSmallScreen() ? sidenavWidth() : '0'">
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

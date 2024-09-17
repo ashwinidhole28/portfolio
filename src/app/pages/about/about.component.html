@@ -1,0 +1,81 @@
+<div fxLayout="column" fxLayoutAlign="center center" fxFlexFill class="about-container">
+    <mat-card class="about-card">
+      <mat-card-header>
+        <mat-card-title>About Me</mat-card-title>
+        <mat-card-subtitle>A brief introduction</mat-card-subtitle>
+      </mat-card-header>
+  
+      <mat-card-content>
+        <!-- Profile Image Section -->
+        <!-- <div class="profile-section">
+          <img src="assets/profile.jpg" alt="Profile Image" class="profile-image">
+        </div> -->
+  
+        <!-- Bio Section -->
+        <div class="bio-section">
+          <h2>Hi, I'm Aditya Jaiswar</h2>
+          <p>
+            I'm a passionate web developer with experience in building responsive, high-quality web applications. I specialize in front-end development, but I also have experience with back-end technologies. I love solving problems and continuously learning to stay up-to-date with the latest trends in web development.
+          </p>
+          <p>
+            My skills include Angular, JavaScript, TypeScript, HTML, CSS, and various back-end technologies like Node.js and SQL databases. I'm always excited to take on new challenges and work on innovative projects.
+          </p>
+        </div>
+  
+        <!-- Skills Section -->
+        <div class="skills-section">
+          <h2>Qualifications</h2>
+          <div class="card">
+            <p-timeline [value]="events" class="custom-timeline">
+              <ng-template pTemplate="content" let-event>
+                <small class="p-text-secondary">{{ event.Place }}</small><br>
+                <b><small class="p-text-secondary">{{ event.percentage }}</small></b>
+              </ng-template>
+              <ng-template pTemplate="opposite" let-event>
+                <b>{{ event.Board }}</b><br>
+                {{ event.date }} 
+              </ng-template>
+            </p-timeline>
+          </div>
+        </div>
+        <div class="skills-container">
+          <h1>Skills</h1>
+          <b><p>FRONTEND</p></b>
+          <div *ngFor="let skill of FrontEndskills" class="skill-item">
+            <div class="skill-info">
+              <h4>{{ skill.name }}</h4>
+              <!-- <input type="range" min="0" max="100" [(ngModel)]="skill.level" /> -->
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="skill.level + '%'"></div>
+            </div>
+          </div>
+          <b><p>BACKEND</p></b>
+          <div *ngFor="let skill of BackEndskills" class="skill-item">
+            <div class="skill-info">
+              <h4>{{ skill.name }}</h4>
+              <!-- <input type="range" min="0" max="100" [(ngModel)]="skill.level" /> -->
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="skill.level + '%'"></div>
+            </div>
+          </div>
+          <b><p>DATABASES</p></b>
+          <div *ngFor="let skill of Databaseskills" class="skill-item">
+            <div class="skill-info">
+              <h4>{{ skill.name }}</h4>
+              <!-- <input type="range" min="0" max="100" [(ngModel)]="skill.level" /> -->
+              <span class="skill-level">{{ skill.level }}%</span>
+            </div>
+            <div class="skill-bar">
+              <div class="skill-progress" [style.width]="skill.level + '%'"></div>
+            </div>
+          </div>
+        </div>
+        
+      </mat-card-content>
+    </mat-card>
+  </div>
+  

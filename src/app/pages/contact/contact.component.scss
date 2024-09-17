@@ -1,0 +1,88 @@
+.contact-container {
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+  
+  .contact-card {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 16px;
+    text-align: center;
+  }
+  .box{
+    margin: 20px;
+    width: 100%;
+  }
+  mat-card-header {
+    text-align: center;
+  }
+  
+  mat-card-title {
+    font-size: 2em;
+  }
+  
+  mat-card-subtitle {
+    font-size: 1.2em;
+    color: gray;
+    margin-top: 4px;
+  }
+  
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  .submit-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
+  
+  button {
+    width: 100%;
+  }
+  
+  @media (max-width: 600px) {
+    .contact-card {
+      padding: 16px;
+    }
+    .contact-container {
+        padding: 24px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+    button {
+      width: auto;
+    }
+  }
+  
+  .info-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  
+    @media (min-width: 600px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  
+  .address-section, .map-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .map-section iframe {
+    width: 100%;
+    height: 450px;
+    border: 0;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  

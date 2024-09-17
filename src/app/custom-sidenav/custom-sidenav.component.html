@@ -1,0 +1,14 @@
+<div class="sidenav-header">
+    <img src="/assets/Aditya.jpg" [width]="profilePicSize()" [height]="profilePicSize()" srcset="" alt="profile"/>
+<div class="header-text" [class.hide-header-text]="sideNavCollapsed()">
+    <h2>Aditya Jaiswar</h2>
+    <p>Software Developer</p>
+</div>
+</div>
+<mat-nav-list>
+    <a mat-list-item *ngFor="let item of menuItems()" [routerLink]="item.route" routerLinkActive="router-link-active" >
+        <mat-icon matListItemIcon fontIcon={{item.icon}}>{{ item.icon }}</mat-icon>
+        <span matListItemTitle *ngIf="!sideNavCollapsed()">{{ item.label }}</span>
+      </a>
+      
+</mat-nav-list>
