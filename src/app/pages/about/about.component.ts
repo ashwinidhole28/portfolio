@@ -39,8 +39,8 @@ export class AboutComponent {
 
   constructor() {
       this.events = [
-          { Board: 'SSC', Place: 'Public Enlish High School',percentage:'50%', icon: 'pi pi-shopping-cart', color: '#9C27B0',date:'2018' },
-          { Board: 'HSC', Place: 'Uttar Bhartiya Sang Jr College',percentage:'71%', icon: 'pi pi-cog', color: '#673AB7',date:'2020' },
+          { Board: 'SSC', Place: 'Dr B.R Ambedkar School',percentage:'82%', icon: 'pi pi-shopping-cart', color: '#9C27B0',date:'2018' },
+          { Board: 'HSC', Place: 'V T Jr College(Dapoli)',percentage:'71%', icon: 'pi pi-cog', color: '#673AB7',date:'2020' },
           { Board: 'Graduation', Place: 'Chetana College Bandra(East)',percentage:'8.3 C.G.P.A', icon: 'pi pi-shopping-cart', color: '#FF9800',date: '2024'},
           // { Board: 'Delivered', Place: '16/10/2020 10:00',percentage:'', icon: 'pi pi-check', color: '#607D8B' }
       ];
